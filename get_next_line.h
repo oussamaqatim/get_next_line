@@ -6,7 +6,7 @@
 /*   By: oqatim <oqatim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 20:22:36 by oqatim            #+#    #+#             */
-/*   Updated: 2021/12/14 22:34:36 by oqatim           ###   ########.fr       */
+/*   Updated: 2021/12/16 20:32:56 by oqatim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include <stdio.h>
 
 size_t	ft_strlen(char *c);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
+
 
 
 #endif
