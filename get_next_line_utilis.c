@@ -6,7 +6,7 @@
 /*   By: oqatim <oqatim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 01:41:31 by oqatim            #+#    #+#             */
-/*   Updated: 2021/12/16 20:33:20 by oqatim           ###   ########.fr       */
+/*   Updated: 2021/12/17 15:23:32 by oqatim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,29 @@ char	*ft_strjoin(char *s1, char *s2)
 	p[i + o] = '\0';
 	free (s1);
 	return (p);
+}
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char			*sub;
+	unsigned int	i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	if (*s == '\0')
+		len = 0;
+	sub = malloc(len + 1);
+	if (!sub)
+		return (NULL);
+	while (len != 0 && start < ft_strlen(s))
+	{
+		sub[i] = s[start];
+		i++;
+		start++;
+		len--;
+	}
+	sub[i] = '\0';
+	return (sub);
 }

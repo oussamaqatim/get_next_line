@@ -6,7 +6,7 @@
 /*   By: oqatim <oqatim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 22:35:32 by oqatim            #+#    #+#             */
-/*   Updated: 2021/12/16 20:30:51 by oqatim           ###   ########.fr       */
+/*   Updated: 2021/12/17 16:45:48 by oqatim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,41 @@ char*	fonc(fd, str)
 	}
 	free (ptr);
 	return (str);
-}	
+}
+
+char *func(char *str)
+{
+	char	*ptr;
+	int 	i;
+	
+	i = 0;
+	while (str[i] != '\n' && str[i] != '\0')
+		{
+			i++;
+		}
+	if (str[i] == '\n')
+		i++;
+	ptr = ft_substr(str, 0, i);
+	return (ptr);
+}
+
+char *fonc(char *str)
+{
+	char	*ptr;	
+	int		s;
+	int 	c;
+
+	s = 0;
+	while (str[s] != '\n' && str[s] != '\0')
+		s++;
+	if (str[s] == '\n')
+		s++;
+	c = ft_strlen(str) - s;
+	ptr = ft_substr(str, s, c);
+	free (str);
+	return (ptr);
+}
+
 char *get_next_line(int fd)
 {
 	char static	*str;
