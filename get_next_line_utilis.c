@@ -6,13 +6,13 @@
 /*   By: oqatim <oqatim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 01:41:31 by oqatim            #+#    #+#             */
-/*   Updated: 2021/12/17 15:23:32 by oqatim           ###   ########.fr       */
+/*   Updated: 2021/12/17 22:07:54 by oqatim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(char *c)
+size_t	ft_strlen(char *s)
 {
     int i;
 

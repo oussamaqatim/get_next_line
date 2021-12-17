@@ -6,13 +6,13 @@
 /*   By: oqatim <oqatim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 22:35:32 by oqatim            #+#    #+#             */
-/*   Updated: 2021/12/17 16:45:48 by oqatim           ###   ########.fr       */
+/*   Updated: 2021/12/17 22:00:30 by oqatim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char*	fonc(fd, str)
+char*	func1(int fd, char *str)
 {
 	char *ptr;
 	int d;
@@ -37,7 +37,7 @@ char*	fonc(fd, str)
 	return (str);
 }
 
-char *func(char *str)
+char	*func2(char *str)
 {
 	char	*ptr;
 	int 	i;
@@ -53,7 +53,7 @@ char *func(char *str)
 	return (ptr);
 }
 
-char *fonc(char *str)
+char *func3(char *str)
 {
 	char	*ptr;	
 	int		s;
@@ -70,9 +70,22 @@ char *fonc(char *str)
 	return (ptr);
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
 	char static	*str;
-
+	char		*cc;
+	
+	if (BUFFER_SIZE <= 0)
+		return (NULL);
+	str = func1(fd, str);
+	cc = func2(str);
+	str = func3(str);
+	return (cc);
+}
+int main()
+{
+	int fd = open("kk" ,O_RDONLY);
+	
+	printf("%s",get_next_line(fd));
 	
 }
